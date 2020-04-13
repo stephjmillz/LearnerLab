@@ -9,24 +9,25 @@ public class TestStudent {
     @Test
 
     public void testImplementation(){
-        Student student1 = new Student(232322, "Jonn");
-        System.out.println(student1 instanceof Learner);
+        Student student1 = new Student(2, "Jonn");
+        Boolean newTest = student1 instanceof Person;
+        Assert.assertTrue(newTest);
 
 
     }
 
     @Test
     public void testInheritance(){
-        Student student2 = new Student(284823, "Json");
-        System.out.println(student2 instanceof Person);
+        Student student2 = new Student(4, "Json");
+        Boolean newTest = student2 instanceof Person;
+        Assert.assertTrue(newTest);
 
     }
 
     @Test
     public void testLearn(){
         Student student3 = new Student(232424, "Slack");
-        Double in = 20.0;
-        Double expected = 20.0;
-        student3.learn(in);
+        student3.learn(5);
+        Assert.assertEquals(5.0, student3.getTotalStudyTime(),2000.00);
     }
 }

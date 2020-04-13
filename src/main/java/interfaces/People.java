@@ -57,6 +57,7 @@ public class People implements Iterable {
     public Integer count() {
         return personList.size();
     }
+
         public Person[] toArray(){
             Person[] res = (Person[])personList.toArray();
             return res;
